@@ -1,5 +1,3 @@
-console.log("JS is loaded !");
-
 const weatherForm = document.querySelector("form");
 const val = document.querySelector("input");
 const m1 = document.querySelector("#msg1");
@@ -11,7 +9,7 @@ weatherForm.addEventListener("submit", (e) => {
   const address = val.value;
   m1.textContent = "Loading...";
   m2.textContent = "";
-  fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+  fetch(`/weather?address=${address}`).then((response) => {
     response.json().then((data) => {
       if (data.err) {
         m1.textContent = data.err;
