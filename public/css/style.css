@@ -1,53 +1,41 @@
 body {
-  background-image: linear-gradient(
-    to right bottom,
-    #130063,
-    #33137c,
-    #4e2897,
-    #693db1,
-    #8452cd,
-    #925fd9,
-    #a06ce6,
-    #ae79f2,
-    #b281f2,
-    #b688f1,
-    #ba90f1,
-    #be97f0
-  );
+  background: linear-gradient(-45deg, #d80556, #a0003e, #000877, #00a9d3);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  height: 100vh;
   font-family: "Roboto Condensed", sans-serif;
   max-width: 650px;
   margin: 0 auto;
   padding: 0 16px;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 .heading {
-  color: #a18be9;
+  font-size: 500%;
+  color: rgb(255, 203, 203);
   animation: hueRotation 30s linear infinite;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .main-content {
   flex-grow: 1;
+  padding: 32px;
+  margin-top: 16px;
+  border: 1px solid #fff;
 }
 
 footer {
   color: #ffffff;
   border-top: 1px solid #eeeeee;
   margin-top: 16px;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
 header {
-  margin-top: 16px;
   margin-bottom: 48px;
-}
-
-h1 {
-  font-size: 65px;
-  margin-bottom: 16px;
 }
 
 .nav-btn {
@@ -55,7 +43,6 @@ h1 {
   margin-top: 16px;
   text-decoration: none;
   padding: 16px;
-  /* animation: hueRotation 30s linear infinite; */
 }
 
 /* .nav-btn-active {
@@ -66,27 +53,20 @@ h1 {
   animation: hueRotation 2s linear infinite;
 } */
 
-.portrait {
-  width: 250px;
+#wimg {
+  margin-top: 32px;
 }
 
-/* input {
-  border: 1px solid #cccccc;
-  padding: 8px;
-}
- */
 #msg1 {
   font-size: 30px;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  animation: hueRotation 5s linear infinite;
 }
 
 #msg2 {
   font-size: 30px;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  animation: hueRotation 5s linear infinite;
 }
 
 .noselect {
@@ -100,18 +80,18 @@ h1 {
 }
 
 #bar {
-  width: 400px;
+  width: 50%;
   height: 50px;
   border: none;
   border-radius: 2px;
   font-family: "Roboto Condensed", sans-serif;
   /* color: white; */
-  font-size: 30px;
+  font-size: 200%;
   transition: 500ms;
 }
 
 button {
-  width: 150px;
+  width: 30%;
   height: 50px;
   cursor: pointer;
   background: #a18be9;
@@ -119,7 +99,7 @@ button {
   border-radius: 2px;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 200%;
   transition: 500ms;
 }
 
@@ -129,7 +109,25 @@ button:hover {
 
 @keyframes hueRotation {
   to {
-    filter: hue-rotate(360deg);
+    filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

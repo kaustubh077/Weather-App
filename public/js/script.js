@@ -21,8 +21,3 @@ weatherForm.addEventListener("submit", (e) => {
     });
   });
 });
-
-const nav = document.querySelector(".nav");
-nav.addEventListener("click", (e) => {
-  e.target.classList.add("");
-});
